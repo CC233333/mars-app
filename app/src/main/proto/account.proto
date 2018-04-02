@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package proto;
+
+option java_package = "u.master.proto";
+option java_outer_classname = "AccountProto";
+option java_multiple_files = true;
+option java_generate_equals_and_hash = true;
+
+message AccountProto {
+    int32 id = 1;
+    string username = 2;
+    string phone = 3;
+}

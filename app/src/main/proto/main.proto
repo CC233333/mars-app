@@ -1,0 +1,57 @@
+package u.master.proto;
+
+message Conversation {
+    required string topic = 1;
+    required string notice = 2;
+    required string name = 3;
+}
+
+message MainRequest {
+    enum FilterType {
+        DEFAULT = 0;
+        ALL = 1;
+        NEAR_BY = 2;
+        FRIENDS = 3;
+        HOT = 4;
+    }
+
+    required string token = 1;
+    required int32 type = 2;
+}
+
+message MainResponse {
+    repeated Conversation list = 1;
+}
+
+
+//syntax = "proto3";
+//
+//package u.master.protocol.proto;
+//
+//option java_package = "u.master.proto";
+//option java_outer_classname = "MainProto";
+//option java_multiple_files = true;
+//option java_generate_equals_and_hash = true;
+//
+//message MainProto {
+//    string topic = 1;
+//    string notice = 2;
+//    string name = 3;
+//}
+//
+//message MainRequest {
+//    enum FilterType {
+//        DEFAULT = 0;
+//        ALL = 1;
+//        NEAR_BY = 2;
+//        FRIENDS = 3;
+//        HOT = 4;
+//    }
+//
+//    string accessToken = 1;
+//    int32 type = 2;
+//}
+//
+//message MainResponse {
+//    repeated MainProto list = 1;
+//}
